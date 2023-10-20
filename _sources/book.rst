@@ -1,21 +1,20 @@
 .. ----------------------------------------------------------------------------
-.. Title:   From Python to Numpy
-.. Author:  Nicolas P. Rougier
-.. Date:    January 2017
+.. Title:   Natural Resource Modeling 
+.. Author:  Harold G. Velasquez
 .. License: Creative Commons Share-Alike Non-Commercial International 4.0
 .. ----------------------------------------------------------------------------
 
 .. meta::
-   :description: An open-source book about numpy vectorization techniques, based on experience, practice and descriptive examples
+   :description: A guide for natural resource modeling
    :viewport: width=device-width, initial-scale=1, maximum-scale=1
 
 .. |date| date::  %B %Y
    
 ===============================================================================
-                             From Python to Numpy                              
+                           Natural Resource Modeling                              
 ===============================================================================
 -------------------------------------------------------------------------------
-       Copyright (c) 2017 - Nicolas P. Rougier <Nicolas.Rougier@inria.fr> 
+       Copyright (c) 2023 - Harold G. Velasquez <hgvelasq@ualberta.ca> 
 -------------------------------------------------------------------------------
 
 .. default-role:: code
@@ -24,16 +23,11 @@
 
    .. image:: data/cc.large.png
       :width: 40px
-   .. image:: data/by.large.png
-      :width: 40px
-   .. image:: data/sa.large.png
-      :width: 40px
    .. image:: data/nc.large.png
       :width: 40px
 
    |
    | Latest version - |date|
-   | DOI: `10.5281/zenodo.225783 <http://doi.org/10.5281/zenodo.225783>`_
 
 .. ----------------------------------------------------------------------------
 .. container:: title-logos
@@ -43,18 +37,32 @@
 
 .. ----------------------------------------------------------------------------
 
-There are already a fair number of books about Numpy (see Bibliography_) and a
-legitimate question is to wonder if another book is really necessary. As you
-may have guessed by reading these lines, my personal answer is yes, mostly
-because I think there is room for a different approach concentrating on the
-migration from Python to Numpy through vectorization. There are a lot of
-techniques that you don't find in books and such techniques are mostly learned
-through experience. The goal of this book is to explain some of these
-techniques and to provide an opportunity for making this experience in the
-process.
+There exists vast bibliography on technical topics related to 
+oil and mineral resource evaluation. This document does not intent to replace
+any of the well-known and more detailed sources, rather it aims to gather 
+current practices for resource evaluation and serve as a guide
+to those who stay curious. This is not a conventional document that dive deep 
+into the mathematical foundations, it keeps at a high level to be digestable 
+for starting and more experienced professionals with multiple backgrounds 
+in the resource industry. 
 
-**Website:** http://www.labri.fr/perso/nrougier/from-python-to-numpy
+The author's intent is to present the variety of techniques at the stages of 
+resource modeling and hopefully summarize teh changes in performance 
+over the last decades. This document aims unbiasedness during
+the presentation of results and no premise of preferences must be made, 
+conclusions are left to careful readers. 
 
+Often, practitioners must decide whether specific algorithms
+suits their needs in terms of skills required, timing and affordability. 
+It's the author's personal opinion that legacy technology must be upgraded. 
+Industry and independent practitioners often do not see the need to replace
+or upgrade. Some of the main reasons include costs and lack of effort. 
+The costs may be associated to the interruption of normality and 
+invesment; while laziness may include the ignorancance resulting from not 
+training and the embracement of the old. Technical expertise should disclosed 
+cyclically to encourage further development.
+
+(see Bibliography_)
 
 .. ----------------------------------------------------------------------------
 .. contents:: **Table of Contents**
@@ -64,30 +72,16 @@ process.
 |
 |
 
-**Disclaimer:** All external pictures should have associated credits. If there
-are missing credits, please tell me, I will correct it. Similarly, all excerpts
-should be sourced (wikipedia mostly). If not, this is an error and I will
-correct it as soon as you tell me.
-
-
-The book is open-access (you're reading it) but **if you insist on buying it**,
-my advice would be to read it first and then decide if you still want to buy it
-(!?). If this is the case, you can do it via `Paypal
-<https://www.paypal.me/NicolasPRougier/>`_, price is free (`5 euros
-<https://www.paypal.me/NicolasPRougier/5>`_, `10 euros
-<https://www.paypal.me/NicolasPRougier/10>`_, `25 euros
-<https://www.paypal.me/NicolasPRougier/25>`_). You won't get anything extra but
-it might help me with the writing of the upcoming **Python and OpenGL for
-Scientific Visualization** (May 2018).
-
+**Disclaimer:** All external pictures should have associated credits, and 
+excerpts should be sourced. Please, contact the author if you find otherwise. 
 
 .. ----------------------------------------------------------------------------
 .. |WIP| image:: https://img.shields.io/badge/status-WIP-orange.svg?style=flat-square
 
 .. ----------------------------------------------------------------------------
 .. include:: 01-preface.rst
+.. include:: 02-introduction.rst
 .. include:: 10-bibliography.rst
-
 
 .. --- Compilation ------------------------------------------------------------
 .. rst2html.py --link-stylesheet --stylesheet=markdown.css book.rst book.html

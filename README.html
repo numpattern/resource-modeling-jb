@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>From Python to Numpy &#8212; My Jupyter Book</title>
+    <title>Natural Resource Modeling &#8212; My Jupyter Book</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -74,6 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -144,15 +154,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="book.html">
-                    From Python to Numpy
+                    Natural Resource Modeling
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01-preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03-anatomy.html">Anatomy of an array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04-code-vectorization.html">Code vectorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10-bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -262,10 +270,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -273,7 +281,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -288,7 +296,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>From Python to Numpy</h1>
+    <h1>Natural Resource Modeling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -302,20 +310,32 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="from-python-to-numpy">
-<h1>From Python to Numpy<a class="headerlink" href="#from-python-to-numpy" title="Permalink to this heading">#</a></h1>
-<p>Copyright (c) 2017 Nicolas P. Rougier<br />
-<strong>License</strong>: <a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International (CC BY-NC-SA 4.0)</a>.<br />
-<strong>Website</strong>: <a class="reference external" href="http://www.labri.fr/perso/nrougier/from-python-to-numpy">http://www.labri.fr/perso/nrougier/from-python-to-numpy</a></p>
-<p>There are already a fair number of books about NumPy
-(see <a class="reference internal" href="10-bibliography.html"><span class="doc std std-doc">bibliography</span></a>) and a legitimate question is to
-wonder if another book is really necessary. As you may have guessed by reading
-these lines, my personal answer is yes, mostly because I think there is room
-for a different approach concentrating on the migration from Python to NumPy
-through vectorization. There are a lot of techniques that you don’t find in
-books and such techniques are mostly learned through experience. The goal of
-this book is to explain some of these techniques and to provide an opportunity
-for making this experience in the process.</p>
+  <section id="natural-resource-modeling">
+<h1>Natural Resource Modeling<a class="headerlink" href="#natural-resource-modeling" title="Permalink to this heading">#</a></h1>
+<p>Copyright (c) 2023 Harold G. Velasquez
+<strong>License</strong>: <a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International (CC BY-NC-SA 4.0)</a>.</p>
+<p>There exists vast bibliography on technical topics related to
+oil and mineral resource evaluation. This document does not intent to replace
+any of the well-known and more detailed sources, rather it aims to gather
+current practices for resource evaluation and serve as a guide
+to those who stay curious. This is not a conventional document that dive deep
+into the mathematical foundations, it keeps at a high level to be digestable
+for starting and more experienced professionals with multiple backgrounds
+in the resource industry.</p>
+<p>The author’s intent is to present the variety of techniques at the stages of
+resource modeling and hopefully summarize teh changes in performance
+over the last decades. This document aims unbiasedness during
+the presentation of results and no premise of preferences must be made,
+conclusions are left to careful readers.</p>
+<p>Often, practitioners must decide whether specific algorithms
+suits their needs in terms of skills required, timing and affordability.
+It’s the author’s personal opinion that legacy technology must be upgraded.
+Industry and independent practitioners often do not see the need to replace
+or upgrade. Some of the main reasons include costs and lack of effort.
+The costs may be associated to the interruption of normality and
+invesment; while laziness may include the ignorancance resulting from not
+training and the embracement of the old. Technical expertise should disclosed
+cyclically to encourage further development.</p>
 <p><img alt="" src="_images/cubes.png" /></p>
 </section>
 
@@ -344,16 +364,12 @@ for making this experience in the process.</p>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -402,8 +418,8 @@ By The Jupyter Book community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

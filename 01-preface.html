@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -65,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introduction" href="02-introduction.html" />
-    <link rel="prev" title="From Python to Numpy" href="book.html" />
+    <link rel="prev" title="Natural Resource Modeling" href="book.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -146,15 +156,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="book.html">
-                    From Python to Numpy
+                    Natural Resource Modeling
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03-anatomy.html">Anatomy of an array</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04-code-vectorization.html">Code vectorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10-bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -264,10 +272,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -275,7 +283,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -305,9 +313,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-author">About the author</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-this-book">About this book</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conventions">Conventions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to contribute</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing">Publishing</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
@@ -331,12 +337,10 @@ document.write(`
 <li><p><a class="reference internal" href="#about-this-book" id="id2">About this book</a></p>
 <ul>
 <li><p><a class="reference internal" href="#prerequisites" id="id3">Prerequisites</a></p></li>
-<li><p><a class="reference internal" href="#conventions" id="id4">Conventions</a></p></li>
-<li><p><a class="reference internal" href="#how-to-contribute" id="id5">How to contribute</a></p></li>
-<li><p><a class="reference internal" href="#publishing" id="id6">Publishing</a></p></li>
+<li><p><a class="reference internal" href="#how-to-contribute" id="id4">How to contribute</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#license" id="id7">License</a></p></li>
+<li><p><a class="reference internal" href="#license" id="id5">License</a></p></li>
 </ul>
 </nav>
 <section id="about-the-author">
@@ -363,77 +367,22 @@ of the popular article <a class="reference external" href="http://dx.doi.org/10.
 <section id="about-this-book">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">About this book</a><a class="headerlink" href="#about-this-book" title="Permalink to this heading">#</a></h2>
 <p>This book has been written in <a class="reference external" href="http://docutils.sourceforge.net/rst.html">restructured text</a> format and generated using the
-<cite>rst2html.py</cite> command line available from the <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> python package.</p>
-<p>If you want to rebuild the html output, from the top directory, type:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rst2html.py --link-stylesheet --cloak-email-addresses \
-              --toc-top-backlinks --stylesheet=book.css \
-              --stylesheet-dirs=. book.rst book.html
-</pre></div>
-</div>
-<p>The sources are available from <a class="github reference external" href="https://github.com/rougier/from-python-to-numpy">rougier/from-python-to-numpy</a>.</p>
+<cite>rst2html.py</cite> command line available from the <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> python package.
+If you want to rebuild the html output, please refer to
+Nicolas Rougier repository <a class="github reference external" href="https://github.com/rougier/from-python-to-numpy">rougier/from-python-to-numpy</a>.</p>
 <section id="prerequisites">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <p>This is not a Python beginner guide and you should have an intermediate level in
 Python and ideally a beginner level in NumPy. If this is not the case, have
-a look at the <a href="#id8"><span class="problematic" id="id9">bibliography_</span></a> for a curated list of resources.</p>
-</section>
-<section id="conventions">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Conventions</a><a class="headerlink" href="#conventions" title="Permalink to this heading">#</a></h3>
-<p>We will use usual naming conventions. If not stated explicitly, each script
-should import NumPy, scipy and matplotlib as:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
-</div>
-<p>We’ll use up-to-date versions (at the date of writing, i.e. January, 2017) of the
-different packages:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Packages</p></th>
-<th class="head"><p>Version</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Python</p></td>
-<td><p>3.6.0</p></td>
-</tr>
-<tr class="row-odd"><td><p>NumPy</p></td>
-<td><p>1.12.0</p></td>
-</tr>
-<tr class="row-even"><td><p>Scipy</p></td>
-<td><p>0.18.1</p></td>
-</tr>
-<tr class="row-odd"><td><p>Matplotlib</p></td>
-<td><p>2.0.0</p></td>
-</tr>
-</tbody>
-</table>
+a look at the <a href="#id6"><span class="problematic" id="id7">bibliography_</span></a> for a curated list of resources.</p>
 </section>
 <section id="how-to-contribute">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">How to contribute</a><a class="headerlink" href="#how-to-contribute" title="Permalink to this heading">#</a></h3>
-<p>If you want to contribute to this book, you can:</p>
-<ul class="simple">
-<li><p>Review chapters (please contact me)</p></li>
-<li><p>Report issues (<a class="github reference external" href="https://github.com/rougier/from-python-to-numpy/issues">rougier/from-python-to-numpy#issues</a>)</p></li>
-<li><p>Suggest improvements (<a class="github reference external" href="https://github.com/rougier/from-python-to-numpy/pulls">rougier/from-python-to-numpy</a>)</p></li>
-<li><p>Correct English (<a class="github reference external" href="https://github.com/rougier/from-python-to-numpy/issues">rougier/from-python-to-numpy#issues</a>)</p></li>
-<li><p>Design a better and more responsive html template for the book.</p></li>
-<li><p>Star the project (<a class="github reference external" href="https://github.com/rougier/from-python-to-numpy">rougier/from-python-to-numpy</a>)</p></li>
-</ul>
-</section>
-<section id="publishing">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Publishing</a><a class="headerlink" href="#publishing" title="Permalink to this heading">#</a></h3>
-<p>If you’re an editor interested in publishing this book, you can <a class="reference external" href="mailto:Nicolas&#46;Rougier&#37;&#52;&#48;inria&#46;fr">contact me</a> if you agree to have this version and all
-subsequent versions open access (i.e. online at <a class="reference external" href="http://www.labri.fr/perso/nrougier/from-python-to-numpy">this address</a>), you know how to
-deal with <a class="reference external" href="http://docutils.sourceforge.net/rst.html">restructured text</a> (Word
-is not an option), you provide a real added-value as well as supporting
-services, and more importantly, you have a truly amazing latex book template
-(and be warned that I’m a bit picky about typography &amp; design: <a class="reference external" href="https://www.edwardtufte.com/tufte/">Edward Tufte</a> is my hero). Still here?</p>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">How to contribute</a><a class="headerlink" href="#how-to-contribute" title="Permalink to this heading">#</a></h3>
+<p>If you want to contribute to this document, please contact me:</p>
 </section>
 </section>
 <section id="license">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">License</a><a class="headerlink" href="#license" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">License</a><a class="headerlink" href="#license" title="Permalink to this heading">#</a></h2>
 <p><strong>Book</strong></p>
 <p>This work is licensed under a <a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-Non Commercial-Share
 Alike 4.0 International License</a>. You are free to:</p>
@@ -442,8 +391,6 @@ Alike 4.0 International License</a>. You are free to:</p>
 <li><p><strong>Adapt</strong> — remix, transform, and build upon the material</p></li>
 </ul>
 <p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p>
-<p><strong>Code</strong></p>
-<p>The code is licensed under the <a class="reference external" href="LICENSE-code.txt">OSI-approved BSD 2-Clause License</a>.</p>
 </section>
 </section>
 
@@ -472,11 +419,10 @@ Alike 4.0 International License</a>. You are free to:</p>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="book.html"
@@ -484,7 +430,7 @@ Alike 4.0 International License</a>. You are free to:</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">From Python to Numpy</p>
+        <p class="prev-next-title">Natural Resource Modeling</p>
       </div>
     </a>
     <a class="right-next"
@@ -496,10 +442,7 @@ Alike 4.0 International License</a>. You are free to:</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -517,9 +460,7 @@ Alike 4.0 International License</a>. You are free to:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-author">About the author</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-this-book">About this book</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conventions">Conventions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-contribute">How to contribute</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing">Publishing</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
@@ -570,8 +511,8 @@ By The Jupyter Book community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
