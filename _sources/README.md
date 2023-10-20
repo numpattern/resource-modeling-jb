@@ -27,4 +27,7 @@ invesment; while laziness may include the ignorancance resulting from not
 training and the embracement of the old. Technical expertise should disclosed 
 cyclically to encourage further development.
 
+
+To Build use jupyer-book 0.12.0
+
 ![](data/cubes.png)
