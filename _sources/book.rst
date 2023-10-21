@@ -5,7 +5,7 @@
 .. ----------------------------------------------------------------------------
 
 .. meta::
-   :description: A guide for natural resource modeling
+   :description: Practices in natural resource modeling
    :viewport: width=device-width, initial-scale=1, maximum-scale=1
 
 .. |date| date::  %B %Y
